@@ -423,14 +423,14 @@
     .timeline { display: flex; flex-direction: column; gap: 0; }
     .timeline-item {
       display: grid;
-      grid-template-columns: 145px 1fr;
+      grid-template-columns: 120px 1fr;
       gap: 0;
       position: relative;
     }
     .timeline-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 144px;
+      left: 119px;
       top: 0; bottom: 0;
       width: 1px;
       background: var(--border);
@@ -440,11 +440,10 @@
       font-family: 'DM Mono', monospace;
       font-size: 0.72rem;
       color: var(--teal);
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
       text-align: right;
       line-height: 1.5;
       border-right: 1px solid var(--border);
-      white-space: nowrap;
     }
     .timeline-content {
       padding: 1.1rem 0 1.1rem 1.8rem;
@@ -588,8 +587,8 @@
       .speaker-grid,
       .bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
       .invited-grid { grid-template-columns: 1fr 1fr; }
-      .timeline-item { grid-template-columns: 110px 1fr; }
-      .timeline-item:not(:last-child)::after { left: 109px; }
+      .timeline-item { grid-template-columns: 90px 1fr; }
+      .timeline-item:not(:last-child)::after { left: 89px; }
       .container { padding: 0 1.5rem; }
       section { padding: 3.5rem 0; }
     }
@@ -612,7 +611,7 @@
       <li><a href="#speakers">Speakers</a></li>
       <li><a href="#program">Program</a></li>
       <li><a href="#venue">Venue</a></li>
-      <li><a href="#register" class="btn btn-primary" style="padding:0.45rem 1.1rem;font-size:0.78rem;">Register</a></li>
+      <li><a href="https://forms.cloud.microsoft/r/TWtZdNkezE" target="_blank" class="btn btn-primary" style="padding:0.45rem 1.1rem;font-size:0.78rem;">Register</a></li>
     </ul>
   </nav>
 
@@ -635,7 +634,7 @@
       </div>
     </div>
     <div class="hero-cta">
-      <a href="#register" class="btn btn-primary">Register Now</a>
+      <a href="https://forms.cloud.microsoft/r/TWtZdNkezE" target="_blank" class="btn btn-primary">Register Now</a>
       <a href="#program" class="btn btn-outline">View Program</a>
     </div>
   </div>
@@ -721,12 +720,20 @@
           </div>
           <div class="speaker-name">Prof Vinh Nguyen</div>
           <div class="speaker-affil">School of Chemistry<br>The University of New South Wales, Australia</div>
-          <div class="talk-title">Talk title to be confirmed</div>
-          <button class="abstract-toggle" onclick="toggleSection(this, 'bio-2')">
+          <div class="talk-title">Designing Chemical Space at Speed: AI, Automation, and Reactivity-Driven Routes to Functional and Bioactive Molecules</div>
+		  <button class="abstract-toggle" onclick="toggleSection(this, 'abstract-2')">
+            Abstract <span class="arrow">▾</span>
+          </button>
+          <div class="abstract-text" id="abstract-2">
+            Molecule discovery is increasingly constrained not by ideas, but by the speed and reproducibility with which chemical matter can be designed, made, and iterated. This seminar will describe a molecular-science-first approach to “bridging AI and Chemistry,” where mechanistic insight, modern synthesis, and automation are integrated into closed-loop workflows that generate both molecules and the high-quality data required to predict the next ones. I will highlight how new reactivity platforms in synthetic methodology, including selective carbonyl olefination and skeletal editing strategies, can convert readily available starting materials into complex, drug-like architectures with rapid diversification at late stages. These transformations provide an ideal testbed for AI, because they expose interpretable structure–reactivity patterns that can be learned, stress-tested, and deployed for design.
+			<br>
+			I will then discuss how robotic synthesis and high-throughput experimentation enable self-driving optimization, producing reproducible datasets that connect reaction outcomes to controllable variables (substrate features, microenvironment, catalyst networks, and process parameters). Finally, I will outline a translational pathway that couples AI-enabled synthesis to real therapeutic needs through industry partnerships, enabling faster lead generation, improved manufacturability, and more sustainable chemistry. The overarching message is that the next generation of drug discovery will be built not only on better models, but on better molecular platforms that make chemical space accessible, predictable, and scalable.
+          </div>
+          <button class="abstract-toggle" style="margin-top:0.5rem;" onclick="toggleSection(this, 'bio-2')">
             Biography <span class="arrow">▾</span>
           </button>
           <div class="speaker-bio-text" id="bio-2">
-            Prof Vinh Nguyen (also known as Thanh Vinh Nguyen) was born in Vietnam and studied industrial chemistry at UNSW before completing his Ph.D. in organic chemistry at ANU with Prof Michael Sherburn. He held a Humboldt Postdoctoral Fellowship at RWTH Aachen under Prof Dieter Enders. He joined UNSW in 2015 as Lecturer/ARC DECRA Fellow, was promoted to Senior Lecturer (2018), Associate Professor (2022), and Professor (2026). His research covers organocatalysis, aromatic cation activation, synthesis of bioactive compounds, asymmetric synthesis, and medicinal chemistry.
+            Prof. Vinh Nguyen (also known as Thanh Vinh Nguyen) was born in Vietnam and studied industrial chemistry at UNSW before completing his Ph.D. in organic chemistry at ANU with Prof Michael Sherburn. He held a Humboldt Postdoctoral Fellowship at RWTH Aachen under Prof Dieter Enders. He joined UNSW in 2015 as Lecturer/ARC DECRA Fellow, was promoted to Senior Lecturer (2018), Associate Professor (2022), and Professor (2026). His research covers organocatalysis, aromatic cation activation, synthesis of bioactive compounds, asymmetric synthesis, and medicinal chemistry.
           </div>
         </div>
       </div>
@@ -764,7 +771,7 @@
   <section id="program" class="program-section">
     <div class="container">
       <p class="section-tag fade-in">Schedule</p>
-      <h2 class="section-title fade-in">Workshop Program</h2>
+      <h2 class="section-title fade-in">Workshop Program (Subject to Change)</h2>
       <p style="font-size:0.85rem;color:var(--muted);margin-bottom:2.5rem;" class="fade-in">Monday, 20 April 2026 &nbsp;·&nbsp; KK301, Kirk Building, VUW</p>
 
       <div class="timeline fade-in">
@@ -795,7 +802,7 @@
           <div class="timeline-time">11:00 – 11:30</div>
           <div class="timeline-content">
             <div class="timeline-type type-talk">Invited Talk</div>
-            <div class="timeline-title">Title to be confirmed</div>
+            <div class="timeline-title">AI for Medical and Health Data Analysis</div>
             <div class="timeline-speaker">Prof Bing Xue — Deputy Director of CDSAI, VUW</div>
           </div>
         </div>
@@ -818,7 +825,7 @@
           <div class="timeline-time">13:00 – 14:00</div>
           <div class="timeline-content">
             <div class="timeline-type type-keynote">Keynote</div>
-            <div class="timeline-title">Title to be confirmed</div>
+            <div class="timeline-title">Designing Chemical Space at Speed: AI, Automation, and Reactivity-Driven Routes to Functional and Bioactive Molecules</div>
             <div class="timeline-speaker">Prof Vinh Nguyen — School of Chemistry, UNSW</div>
           </div>
         </div>
@@ -834,7 +841,7 @@
           <div class="timeline-time">14:30 – 15:00</div>
           <div class="timeline-content">
             <div class="timeline-type type-talk">Invited Talk</div>
-            <div class="timeline-title">Title to be confirmed</div>
+            <div class="timeline-title">Bees, Mould and Beer: A Snapshot of Carbohydrate Research Activities</div>
             <div class="timeline-speaker">A/Prof Simon Hinkley — Ferrier Research Institute, VUW</div>
           </div>
         </div>
@@ -866,7 +873,7 @@
             <iframe
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.8!2d174.7683!3d-41.29044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd890e32e17%3A0xf05da46f94b7e5d7!2sKirk%20Building%2C%20Victoria%20University%20of%20Wellington!5e0!3m2!1sen!2snz!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.9329826235053!2d174.76828749999999!3d-41.288562999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38b028d7f03ce1%3A0x688258c26d877af4!2sKirk%20Building!5e0!3m2!1sen!2snz!4v1776084405382!5m2!1sen!2snz"
               style="width:100%;height:100%;border:none;"
               allowfullscreen>
             </iframe>
@@ -880,11 +887,11 @@
             <div class="reg-highlight">
               Attendance is <strong>free</strong> and open to all. Registration is required for catering purposes — please fill in the form below before the event.
             </div>
-            <a href="#" class="btn btn-primary" style="display:block;text-align:center;width:100%;">
-              Register via Google Form →
+            <a href="https://forms.cloud.microsoft/r/TWtZdNkezE" target="_blank" class="btn btn-primary" style="display:block;text-align:center;width:100%;">
+              Register via Microsoft Forms →
             </a>
             <p class="contact-line" style="margin-top:1.5rem;">
-              Questions? Contact <a href="#">Dr Binh Nguyen</a><br>
+              Questions? Contact <a href="https://people.wgtn.ac.nz/b.nguyen" target="_blank">Dr Binh Nguyen</a><br>
               SMS &amp; CDSAI, Victoria University of Wellington
             </p>
           </div>
