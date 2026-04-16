@@ -423,14 +423,14 @@
     .timeline { display: flex; flex-direction: column; gap: 0; }
     .timeline-item {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 145px 1fr;
       gap: 0;
       position: relative;
     }
     .timeline-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 119px;
+      left: 144px;
       top: 0; bottom: 0;
       width: 1px;
       background: var(--border);
@@ -440,10 +440,11 @@
       font-family: 'DM Mono', monospace;
       font-size: 0.72rem;
       color: var(--teal);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       text-align: right;
       line-height: 1.5;
       border-right: 1px solid var(--border);
+      white-space: nowrap;
     }
     .timeline-content {
       padding: 1.1rem 0 1.1rem 1.8rem;
@@ -754,12 +755,12 @@
           <div class="invited-role">SMS &amp; CDSAI · Victoria University of Wellington</div>
         </div>
         <div class="invited-card">
-          <div class="invited-name">A/Prof Simon Hinkley</div>
-          <div class="invited-role">Ferrier Research Institute · Victoria University of Wellington</div>
+          <div class="invited-name">Dr Phillip Rendle</div>
+          <div class="invited-role">Deputy Director, Ferrier Research Institute · Victoria University of Wellington</div>
         </div>
-        <div class="invited-card" style="border-style:dashed;opacity:0.6;">
-          <div class="invited-name" style="color:var(--muted);">Speaker TBC</div>
-          <div class="invited-role">To be confirmed</div>
+        <div class="invited-card">
+          <div class="invited-name">A/Prof Simon Hinkley</div>
+          <div class="invited-role">Science Team Leader, Ferrier Research Institute · Victoria University of Wellington</div>
         </div>
       </div>
     </div>
@@ -833,8 +834,8 @@
           <div class="timeline-time">14:00 – 14:30</div>
           <div class="timeline-content">
             <div class="timeline-type type-talk">Invited Talk</div>
-            <div class="timeline-title">Title to be confirmed</div>
-            <div class="timeline-speaker">Speaker to be confirmed</div>
+            <div class="timeline-title">Introduction to the Ferrier Research Institute and the Challenges/Opportunities of using AI in Drug Discovery</div>
+            <div class="timeline-speaker">Dr Phillip Rendle — Deputy Director of the Ferrier Research Institute, VUW</div>
           </div>
         </div>
         <div class="timeline-item">
